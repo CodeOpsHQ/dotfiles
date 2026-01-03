@@ -1,8 +1,0 @@
-[[mgr.prepend_keymap]]
-on  = "M"
-run = "plugin mount"
-
-[[mgr.prepend_keymap]]
-on  = ["'", "s"]
-run = "plugin what-size"
-desc = "Show file size"
