@@ -20,7 +20,7 @@
 /* Reset all styles */
 
 * {
-    color: @lavender;
+    color: @text;
     border: 0;
     padding: 0 0;
     font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -55,12 +55,12 @@ window#waybar {
 }
 
 #workspaces * {
-    color: whitesmoke;
+    color: @text;
 }
 
 #workspaces {
     border-style: solid;
-    background-color: @base;
+    background-color: @surface0;
     opacity: 1;
     border-radius: 10px;
     margin: 8px 0px 8px 8px;
@@ -78,7 +78,7 @@ window#waybar {
 }
 
 #mode {
-    color: #ebcb8b;
+    color: @yellow;
 }
 
 #clock,
@@ -104,7 +104,7 @@ window#waybar {
 #mpd {
     padding: 5px 8px;
     border-style: solid;
-    background-color: shade(@base, 1);
+    background-color: @surface0;
     opacity: 1;
     margin: 8px 0;
 }
@@ -174,8 +174,7 @@ window#waybar.empty #window {
 }
 
 #clock {
-    /* background-color:#a3be8c; */
-    color: @sky;
+    color: @blue;
     border-radius: 10px;
     margin: 8px 10px;
 }
@@ -195,7 +194,7 @@ window#waybar.empty #window {
 }
 
 #battery.charging {
-    color: #81a1c1;
+    color: @blue;
     /* border-bottom: 2px solid #81a1c1; */
 }
 
@@ -213,7 +212,7 @@ window#waybar.empty #window {
 
 
 #battery.critical:not(.charging) {
-    color: #bf616a;
+    color: @red;
     /* border-bottom: 2px solid #bf616a; */
     animation-name: blink;
     animation-duration: 0.5s;
@@ -245,7 +244,7 @@ window#waybar.empty #window {
 }
 
 #network.disabled {
-    color: #bf616a;
+    color: @red;
     /* border-bottom: 2px solid #bf616a; */
 }
 
@@ -257,7 +256,7 @@ window#waybar.empty #window {
 }
 
 #network.disconnected {
-    color: #bf616a;
+    color: @red;
     /* border-bottom: 2px solid #bf616a; */
 }
 
@@ -267,7 +266,7 @@ window#waybar.empty #window {
 }
 
 #pulseaudio.muted {
-    color: #3b4252;
+    color: @surface2;
     /* border-bottom: 2px solid #3b4252; */
 }
 
@@ -283,7 +282,7 @@ window#waybar.empty #window {
 }
 
 #idle_inhibitor {
-    background-color: #ebcb8b;
+    background-color: @yellow;
     color: @base;
     border-radius: 10px;
 }
@@ -298,7 +297,7 @@ window#waybar.empty #window {
 #custom-power {}
 
 #custom-launcher {
-    background-color: @mauve;
+    background-color: @blue;
     color: @base;
     border-radius: 10px;
     padding: 5px 10px;
@@ -307,7 +306,7 @@ window#waybar.empty #window {
 
 #custom-power {
     color: @base;
-    background-color: @red;
+    background-color: @mauve;
     border-radius: 10px;
     margin-left: 5px;
     margin-right: 15px;
