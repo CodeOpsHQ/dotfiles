@@ -40,18 +40,14 @@ window#waybar {
     padding: 4 6 2 0;
 }
 
-#workspaces button:hover * {
-    color: @mauve;
+#workspaces button:hover {
+    background-color: @selection;
+    color: @blue;
+    transition: all 0.2s ease;
 }
 
-#workspaces button:hover {
-    color: @mauve;
-    box-shadow: none;
-    /* Remove predefined box-shadow */
-    text-shadow: none;
-    /* Remove predefined text-shadow */
-    border: 0px;
-    background: none;
+#workspaces button:hover * {
+    color: @blue;
 }
 
 #workspaces * {
@@ -68,13 +64,12 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    color: @mauve;
-    border-radius: 20px;
-    /* background-color: @flamingo; */
+    color: @blue;
+    background-color: transparent;
 }
 
 #workspaces button.focused * {
-    color: @mauve;
+    color: @blue;
 }
 
 #mode {
