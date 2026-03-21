@@ -269,8 +269,8 @@ window#waybar.empty #window {
 }
 
 #pulseaudio {
-    color: @flamingo;
-    /* border-bottom: 2px solid @flamingo; */
+    color: @blue;
+    /* border-bottom: 2px solid @blue; */
 }
 
 #pulseaudio.muted {
