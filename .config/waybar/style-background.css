@@ -34,10 +34,9 @@ window#waybar {
 
 #workspaces button {
     color: @base;
-    border-radius: 50%;
-    /* background-color: @base; */
+    border-radius: 10px;
     margin: 0px 0px;
-    padding: 4 6 2 0;
+    padding: 4 3 3 0;
 }
 
 #workspaces button:hover {
@@ -93,7 +92,6 @@ window#waybar {
 #mode,
 #window,
 #tray,
-#custom-power,
 #custom-pacman,
 #custom-system,
 #mpd {
@@ -113,18 +111,6 @@ window#waybar {
 /* -----------------------------------------------------------------------------
    * Module styles
    * -------------------------------------------------------------------------- */
-
-#mode {
-    border-radius: 10px;
-    color: @mauve;
-    margin-right: 5px;
-}
-
-#custom-cava-internal {
-    border-radius: 10px;
-    color: @mauve;
-}
-
 #mpd {
     border-radius: 10px;
     color: @mauve;
@@ -150,6 +136,12 @@ window#waybar {
     padding: 4px 10px 4px 14px;
 }
 
+#mode {
+    border-radius: 10px;
+    color: @text;
+    margin-right: 5px;
+}
+
 #mpd.2,
 #mpd.3,
 #mpd.4 {
@@ -162,18 +154,23 @@ window#waybar {
     color: @base;
     margin-left: 5px;
     margin-right: 5px;
-    background-color: @mauve;
+    background-color: @blue;
 }
 
 window#waybar.empty #window {
     background-color:transparent;
 }
 
+#custom-cava-internal {
+    border-radius: 10px;
+    color: @text;
+}
+
 #custom-swap {
     border-radius: 10px;
     color: @base;
     margin-left: 10px;
-    background-color: @mauve;
+    background-color: @blue;
 }
 
 #custom-background {
@@ -191,26 +188,22 @@ window#waybar.empty #window {
 
 #backlight {
     color: @yellow;
-    /* border-bottom: 2px solid @yellow; */
     border-radius: 10px 0 0 10px;
 }
 
 #battery {
     color: @green;
-    /* border-bottom: 2px solid #d8dee9; */
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
 }
 
 #battery.charging {
     color: @blue;
-    /* border-bottom: 2px solid #81a1c1; */
 }
 
 @keyframes blink {
     to {
         color: @red;
-        /* border-bottom: 2px solid @red; */
     }
 }
 
@@ -221,7 +214,6 @@ window#waybar.empty #window {
 
 #battery.critical:not(.charging) {
     color: @red;
-    /* border-bottom: 2px solid #bf616a; */
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -231,12 +223,10 @@ window#waybar.empty #window {
 
 #custom-system {
     color: @sky;
-    /* border-bottom: 2px solid @sky; */
 }
 
 #cpu {
     color: @sky;
-    /* border-bottom: 2px solid @sky; */
 }
 
 #cpu #cpu-icon {
@@ -253,40 +243,33 @@ window#waybar.empty #window {
 
 #network.disabled {
     color: @red;
-    /* border-bottom: 2px solid #bf616a; */
 }
 
 #network {
     color: @green;
-    /* border-bottom: 2px solid @green; */
     border-radius: 10px;
     margin-right: 5px;
 }
 
 #network.disconnected {
     color: @red;
-    /* border-bottom: 2px solid #bf616a; */
 }
 
 #pulseaudio {
-    color: @blue;
-    /* border-bottom: 2px solid @blue; */
+    color: @sapphire;
 }
 
 #pulseaudio.muted {
     color: @surface2;
-    /* border-bottom: 2px solid #3b4252; */
 }
 
 #temperature {
     color: @teal;
-    /* border-bottom: 2px solid @teal; */
     border-radius: 10px 0 0 10px;
 }
 
 #temperature.critical {
     color: @red;
-    /* border-bottom: 2px solid @red; */
 }
 
 #idle_inhibitor {
@@ -296,122 +279,30 @@ window#waybar.empty #window {
 }
 
 #tray {
-    /* background-color: @base; */
     margin: 8px 10px;
     border-radius: 10px;
 }
 
 #custom-launcher,
-#custom-power {}
-
-#custom-launcher {
+#custom-power {
     background-color: @blue;
     color: @base;
-    border-radius: 0px 15px 0px 0px;
-    padding: 5px 10px 5px 10px;
-}
-
-#custom-power {
-    color: @base;
-    background-color: @mauve;
-    border-radius: 10px;
-    margin-left: 5px;
-    margin-right: 15px;
     padding: 5px 10px;
 }
 
-#window {
-    border-style: hidden;
-    margin-left: 10px;
-    /* margin-top:1px;  
-      padding: 8px 1rem; */
-    margin-right: 10px;
-    color: @text;
+#custom-launcher {
+    border-radius: 0px 15px 0px 0px;
+}
+
+#custom-power {
+    /* border-radius: 10px; */
+    border-radius: 15px 0px 0px 0px;
+    margin-left: 5px;
+    /* margin-right: 15px; */
 }
 
 #custom-keyboard-layout {
     color: @peach;
-    /* border-bottom: 2px solid @peach; */
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
 }
-
-
-
-/* window#waybar {
-      background: #2d2a2e;
-  }
-  
-  * {
-      color: #c8b9a9;
-      font-family: Ubuntu Mono, sans-serif;
-      font-size: 12px;
-  }
-  
-  #workspaces button.focused {
-      color: #f2e5bc;
-  }
-  
-  #workspaces button {
-      color: #c8b9a9;
-  }
-  
-  .separator {
-      background-color: #c8b9a9;
-  }
-  
-  #mode {
-      color: #ebcb8b;
-  }
-  
-  #clock {
-      color: #a3be8c;
-  }
-  
-  #battery {
-      color: #d8dee9;
-  }
-  
-  #battery.charging {
-      color: #b48ead;
-  }
-  
-  #battery.critical:not(.charging) {
-      color: #bf616a;
-  }
-  
-  #cpu {
-      color: #a3be8c;
-  }
-  
-  #memory {
-      color: #d3869b;
-  }
-  
-  #network {
-      color: #8fbcbb;
-  }
-  
-  #network.disabled {
-      color: #bf616a;
-  }
-  
-  #network.disconnected {
-      color: #bf616a;
-  }
-  
-  #pulseaudio {
-      color: #b48ead;
-  }
-  
-  #pulseaudio.muted {
-      color: #bf616a;
-  }
-  
-  #temperature {
-      color: #8fbcbb;
-  }
-  
-  #temperature.critical {
-      color: #bf616a;
-  } */

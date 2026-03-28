@@ -1,11 +1,11 @@
 /* Tokyo Night "Night" palette */
 @define-color base      #1a1b26;
 @define-color mantle    #16161e;
-@define-color crust     #101014;
+@define-color crust     #0C0E14;
 
 @define-color text      #c0caf5;
 @define-color subtext0  #a9b1d6;
-@define-color subtext1  #9aa5ce;
+@define-color subtext1  #3b4261;
 
 @define-color surface0  #292e42;
 @define-color surface1  #414868;
@@ -19,7 +19,7 @@
 @define-color lavender  #9d7cd8; /* Tokyo Night Purple */
 @define-color sapphire  #2ac3de;
 @define-color sky       #89ddff;
-@define-color teal      #73daca;
+@define-color teal      #1abc9c;
 @define-color green     #9ece6a;
 @define-color yellow    #e0af68;
 @define-color peach     #ff9e64;
