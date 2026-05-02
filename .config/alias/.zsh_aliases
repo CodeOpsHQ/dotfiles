@@ -6,8 +6,8 @@
 # NOTE: In Git Bash, you can use something like "/c/Program\ Files/Notepad++/notepad++.exe"
 #######################################################
 
-export EDITOR=vim visudo
-export VISUAL=vim visudo
+export EDITOR=vim
+export VISUAL=vim
 export SUDO_EDITOR=vim
 export FCEDIT=vim
 
@@ -516,78 +516,6 @@ fi
 if [[ -x "$(command -v nnn)" ]]; then
 	if [[ -f "$HOME/.config/nnn/plugins/finder" ]]; then
 		export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview'
-#######################################################
-# Set default variable values
-# These variables can be overridden in one of these environment variable files:
-# ~/.env
-# ~/.envrc
-# ~/.config/bashrc/config
-#######################################################
-
-# Determines if CTRL-h will show help
-# Ctrl+h (for help) and Ctrl+Backspace share the same key binding
-# in some terminal emulators so we default to skip this keybind
-_SKIP_HELP_KEYBIND=true
-
-# Blesh: Bash Line Editor replaces default GNU Readline
-# Link: https://github.com/akinomyoga/ble.sh
-# Link for configuration: https://github.com/akinomyoga/ble.sh/blob/master/blerc
-# WARNING: Can be buggy with certain prompts (like Trueline)
-_SKIP_BLESH=true
-
-# Make sure the default file and directory permissions for newly created files
-# in the home directory is umask 026 to improve security.
-# (user=read/write/execute, group=read/execute, others=execute for directories)
-# The default is to skip this security setting and not modify home permissions
-_SKIP_UMASK_HOME=true
-
-# Replaces Sudo with one of the two alternatives (if installed):
-# RootDO (rdo) - A very slim alternative to both sudo and doas
-# Link: https://codeberg.org/sw1tchbl4d3/rdo
-# - OR -
-# A port of OpenBSD's doas offers two benefits over sudo:
-# 1) Its configuration file has a simple syntax and
-# 2) It is smaller, requiring less effort to audit the code
-# Link: https://github.com/Duncaen/OpenDoas or https://github.com/slicer69/doas
-# Default value is skip and must be set to false manually for security reasons
-_SKIP_SUDO_ALTERNATIVE=true
-
-# If set to true, cd will not output the current absolute path under certain
-# circumstances like when using the command cd - or using cdable_vars bookmarks
-# Link: https://www.gnu.org/software/bash/manual/bash.html#index-cd
-_SILENCE_CD_OUTPUT=false
-
-# If set to true, will not load anything that modifies the ls command or colors
-_SKIP_LS_COLORIZED=false
-
-# exa is a modern color replacement for ls that also has some Git support
-# Link: https://github.com/ogham/exa
-_SKIP_EXA=false
-
-# grc Generic Colouriser
-# Link: https://github.com/garabik/grc
-_SKIP_GRC=false
-
-# If set to true, will not source bash completion scripts
-_SCRIPT_BASH_COMPLETION=false
-
-# Optional original prompt from 2014 version now with newly added Git support
-# download the optional .bashrc_prompt script file and place it in either your
-# home directory or as the file ~/.config/bashrc/prompt
-# You will also need to make sure this setting is set to false
-_SKIP_PROMPT_ORIGINAL=false
-
-# If false, the built-in prompt will be one single line with an abreviated path
-# If true, the built-in prompt will split into two lines with a full path
-_PROMPT_BUILTIN_FULL_PATH=false
-
-# Starship Cross Shell Prompt (focus on compatibility and written in Rust)
-# Link: https://starship.rs
-# Install: sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-_SKIP_PROMPT_STARSHIP=false
-
-# Determine our kernel name
-_KERNEL_NAME="$(expr substr $(uname -s) 1 5)"
 		alias nnnplugins='curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh'
 	fi
 	#alias nnn='nnn -e'

@@ -75,8 +75,8 @@ setopt promptsubst         # enable command substitution in prompt
 #######################################################
 # export EDITOR=nvim
 # export VISUAL=nvim
-export EDITOR=nvim visudo
-export VISUAL=nvim visudo
+export EDITOR=nvim
+export VISUAL=nvim
 export SUDO_EDITOR=nvim
 export FCEDIT=nvim
 export TERMINAL=alacritty
@@ -255,7 +255,11 @@ fi
 # Alias for FZF
 # Link: https://github.com/junegunn/fzf
 if [[ -x "$(command -v fzf)" ]]; then
-    alias fzf='fzf --preview "bat --style=numbers --color=always --line-range :500 {}"'
+    if [[ -x "$(command -v bat)" ]]; then
+        alias fzf='fzf --preview "bat --style=numbers --color=always --line-range :500 {}"'
+    else
+        alias fzf='fzf --preview "cat {}"'
+    fi
     # Alias to fuzzy find files in the current folder(s), preview them, and launch in an editor
 	if [[ -x "$(command -v xdg-open)" ]]; then
 		alias preview='open $(fzf --info=inline --query="${@}")'
@@ -351,7 +355,7 @@ function random_bars() {
 #######################################################
 # ZSH Syntax highlighting
 #######################################################
-source ~/.config/zsh/zsh-syntax-highlightin-tokyonight.zsh
+source ~/.config/zsh/zsh-syntax-highlighting-tokyonight.zsh
 
 #######################################################
 # Shell integrations
@@ -360,10 +364,10 @@ source ~/.config/zsh/zsh-syntax-highlightin-tokyonight.zsh
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-Zoxide config for zsh plugins 
-eval "$(zoxide init --cmd cd zsh)"
+# Zoxide config for zsh plugins
+# eval "$(zoxide init --cmd cd zsh)"
 
 
-Tmuxifier config for zsh plugins  
-eval "$(tmuxifier init -)"
+# Tmuxifier config for zsh plugins
+# eval "$(tmuxifier init -)"
 
