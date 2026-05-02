@@ -360,10 +360,10 @@ source ~/.config/zsh/zsh-syntax-highlightin-tokyonight.zsh
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-Zoxide config for zsh plugins 
-eval "$(zoxide init --cmd cd zsh)"
+# Zoxide config for zsh plugins
+# eval "$(zoxide init --cmd cd zsh)"
 
 
-Tmuxifier config for zsh plugins  
-eval "$(tmuxifier init -)"
+# Tmuxifier config for zsh plugins
+# eval "$(tmuxifier init -)"
 
