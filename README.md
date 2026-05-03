@@ -11,22 +11,10 @@ and if you have tmuxifier installed, you can uncomment the tmuxifier line in the
 
 ## Installation
 
-To use this repository, simply clone it to your local machine. 
+To use this repository, simply clone it and install the dotfiles with a single command.
 
 ```bash
-git clone https://github.com/codeopshq/dotfiles.git
-```
-
-Once cloned, navigate to the desired directory.
-
-```bash
-cd dotfiles
-```
-
-Run stow to install the dotfiles.
-
-```bash
-stow .
+git clone https://github.com/codeopshq/dotfiles.git && stow -d dotfiles -t ~ .
 ```
 
 You are now ready to use the dotfiles in your environment.
